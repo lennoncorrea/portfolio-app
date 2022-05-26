@@ -1,0 +1,11 @@
+.navbarApp .item{
+    font-size: 90%;
+}
+.navbarApp .item:hover{
+    text-shadow:0px 0px 1px rgb(0, 0, 0, 0.1);
+}
+.navbarApp .navBrand{
+    font-weight: normal;
+    margin-right: 2rem;
+}
+

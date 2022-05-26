@@ -1,0 +1,40 @@
+.skills .item{
+    padding-bottom:0.2rem;
+}
+.skills p{
+    margin-bottom: 0;
+}
+
+.skills .title{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    line-height: 0;
+}
+
+.experience{
+    margin-top: 3rem;
+}
+
+.experience .title{
+    margin-bottom: 1rem;
+}
+
+.experience .item{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.education {
+    line-height: 0;
+}
+
+.education .title{
+    margin-bottom: 2rem;
+}
+
+.education .item{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-decoration: none;
+}

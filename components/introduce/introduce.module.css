@@ -1,0 +1,32 @@
+.introduce{
+    margin: 4rem 0;
+    line-height: 1.5;
+    font-size: 3rem;
+}
+
+.introduce h2 {
+    line-height: 1.5;
+    font-size: 4rem;
+}
+
+.introduce button{
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.introduce .salute {
+    line-height: 0;
+}
+
+.introduce .occupation{
+    margin-bottom: 0;
+    font-size:1rem;
+    font-family: monospace;
+}
+
+.introduce .center{
+    text-align: center;
+}
+

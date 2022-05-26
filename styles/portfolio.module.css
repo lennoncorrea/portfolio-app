@@ -1,0 +1,9 @@
+.divButton{
+    margin-top: 5rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .responsiveHandle {
+    display: none;
+  }
+}

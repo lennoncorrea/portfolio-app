@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             </a>
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Contact me &rarr;</h2>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>My inbox is always open just get in touch.</p>
             </a>
           </div>
         </main>

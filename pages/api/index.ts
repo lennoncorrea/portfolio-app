@@ -14,7 +14,7 @@ type UserData = {
   "created_at": string
 };
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+export const handler = async () => {
 
   const response: Response = await fetch('https://api.twitch.tv/helix/users?login=flyshed', {
     method: 'GET',
@@ -25,9 +25,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   });
   const objResponse:any = await response.json();
   const userData:UserData = objResponse.data[0];
-  res.status(200).json(userData);
+  return userData;
   
 }
 
-export default handler;
 export type { UserData };

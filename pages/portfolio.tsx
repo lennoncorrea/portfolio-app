@@ -8,6 +8,7 @@ import Footer from '../components/footer/footer';
 import About from '../components/about/about';
 import More from '../components/more/more'
 import { UserData } from './api';
+import { handler } from './api';
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -85,8 +86,7 @@ const Portfolio: NextPage<UserData> = ({ user }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/api');
-  const data: UserData = await res.json();
+  const data: UserData = await handler();
   return {
     props: {
       user: data

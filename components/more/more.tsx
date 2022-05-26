@@ -9,7 +9,6 @@ const More = ({ data }: { data: UserData }) => {
 
   return (
     <>
-      
 
     </>
   )

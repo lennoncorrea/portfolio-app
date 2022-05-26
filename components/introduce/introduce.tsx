@@ -13,7 +13,7 @@ const Introduce = () => {
       <div className={styles.introduce}>
         <Col>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }} >
-            <p className={styles.salute}>Hi, i'm</p>
+            <p className={styles.salute}>{"Hi, i'm"}</p>
           </motion.div>
           <motion.div whileHover={{ scale: 1.1 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} >
             <h2>{"Lennon."}</h2>

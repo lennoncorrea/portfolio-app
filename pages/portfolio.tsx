@@ -18,7 +18,7 @@ import styles from "../styles/portfolio.module.css"
 
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;
-const navItems: string[] = ["Home", "About", "More"];
+const navItems: string[] = ["Home", "About"];
 const skills: object = {
   "C#": "50",
   "Java": "50",

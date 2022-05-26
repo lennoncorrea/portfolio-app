@@ -7,13 +7,14 @@ import Introduce from '../components/introduce/introduce';
 import Footer from '../components/footer/footer';
 import About from '../components/about/about';
 import More from '../components/more/more'
-import { UserData } from './api';
-import { handler } from './api';
+import { UserData } from '../models/twitchModels';
+import { twitchRequest } from './api';
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
+
 
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;
@@ -86,7 +87,7 @@ const Portfolio: NextPage<UserData> = ({ user }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data: UserData = await handler();
+  const data: UserData = await twitchRequest();
   return {
     props: {
       user: data

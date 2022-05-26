@@ -6,7 +6,7 @@ const NavbarApp = ({ brand, items, callback }: { brand: any, items: string[], ca
   return (
     <Navbar expand="lg" variant="light" className={styles.navbarApp}>
       <Container>
-        <Navbar.Brand href="#" className={styles.navBrand}>{brand}</Navbar.Brand>
+        <Navbar.Brand href="/" className={styles.navBrand}>{brand}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav className="me-auto" >

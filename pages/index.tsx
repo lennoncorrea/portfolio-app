@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react'
+import FormApp from '../components/form/form'
+import ModalApp from '../components/modal/Modal'
 
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <>
       <div className={styles.container}>
@@ -30,13 +34,14 @@ const Home: NextPage = () => {
               <h2>Linkedin &rarr;</h2>
               <p>Check it out my linkedin page and hit me up!</p>
             </a>
-            <a href="https://nextjs.org/docs" className={styles.card}>
+            <a href="#" className={styles.card} onClick={() => setModalShow(true)}>
               <h2>Contact me &rarr;</h2>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>My inbox is always open just get in touch.</p>
             </a>
           </div>
         </main>
       </div>
+      <ModalApp title="Contact Me" body={<FormApp onHide={() => setModalShow(false)} />} show={modalShow} onHide={() => setModalShow(false)} />
     </>
   )
 }

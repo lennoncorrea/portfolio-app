@@ -8,17 +8,17 @@ import Footer from '../components/footer/footer';
 import About from '../components/about/about';
 import More from '../components/more/more'
 import { UserData } from '../models/twitchModels';
-import { twitchRequest } from './api';
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
+import { twitchUserData } from './api';
 
 
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;
-const navItems: string[] = ["Home", "About"];
+const navItems: string[] = ["Home", "About", "More"];
 const skills: object = {
   "C#": "50",
   "Java": "50",
@@ -70,12 +70,10 @@ const Portfolio: NextPage<UserData> = ({ user }: any) => {
               <Introduce />
             </Col>
             {!homeState ?
-              <Col className="centralizeY block" xs={7}>
-                <div className={styles.divButton}>
+                <>
                   {aboutState ? <About skills={skills} /> : null}
                   {moreState ? <More data={twitchUser} /> : null}
-                </div>
-              </Col> :
+                </> :
               null
             }
           </Row>
@@ -87,7 +85,7 @@ const Portfolio: NextPage<UserData> = ({ user }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data: UserData = await twitchRequest();
+  const data: UserData = await twitchUserData();
   return {
     props: {
       user: data

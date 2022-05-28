@@ -12,6 +12,12 @@ export type UserData = {
   };
   
   export type TwichApiHeader = {
-    'Authorization': string,
-    'ClientId': string
+    'ClientId': string,
+    'ClientSecret': string
+  }
+
+  export type TwitchAcessToken = {
+    "access_token": string,
+    "expires_in": string,
+    "token_type": string
   }

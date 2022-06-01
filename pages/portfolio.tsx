@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import React, { FunctionComponent, useState } from 'react';
-import { GetStaticProps, NextPage } from 'next';
+import React, { useState } from 'react';
+import { GetStaticProps } from 'next';
 
 import NavbarApp from '../components/navbar/navbar';
 import Introduce from '../components/introduce/introduce';

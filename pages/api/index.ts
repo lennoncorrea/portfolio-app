@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { SteamApiHeader, SteamUserData } from '../../models/steam';
-import { TwichApiHeader, TwitchAcessToken, TwitchUserData } from '../../models/twitch';
 
 export const handler: (req: NextApiRequest, res: NextApiResponse) => void = async (req: NextApiRequest, res: NextApiResponse) => {
   const data = {

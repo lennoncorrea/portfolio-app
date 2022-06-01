@@ -3,7 +3,10 @@ import { Card, Col, Container, ListGroup } from "react-bootstrap";
 import { FaTwitch } from "react-icons/fa";
 import styles from "./animatedCard.module.css"
 
-const AnimatedCard = ({ listItems, state, toggleState }: { listItems:any, state: boolean, toggleState: () => void }) => {
+const AnimatedCard = ({ listItems, state, toggleState }: { listItems: any, state: boolean, toggleState: () => void }) => {
+  const stateOpacity = () => (
+    state ? { opacity: 1 } : { opacity: 0 }
+  );
   return (
     <>
       <Col className="centralizeY">
@@ -13,7 +16,7 @@ const AnimatedCard = ({ listItems, state, toggleState }: { listItems:any, state:
               <FaTwitch />
             </Card.Header>
             {state ?
-              <motion.div initial={{ opacity: 1 }} animate={state ? { opacity: 1 } : { opacity: 1 }} className={styles.items}>
+              <motion.div initial={{ opacity: 1 }} animate={stateOpacity()} className={styles.items}>
                 <ListGroup>
                   {listItems}
                 </ListGroup>

@@ -1,4 +1,4 @@
-import { Col, Container, Image, ListGroup, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import styles from "./more.module.css"
 import { SetStateAction, useState } from "react";
 import { TwitchUserData } from "../../models/twitch";

@@ -5,6 +5,7 @@ declare global {
  * @returns The date as DD/MM/YYYY string.
  */
         formate(): string;
+        formateUnix(): string 
     }
 
     interface String {

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { Card, Col, Container, ListGroup } from "react-bootstrap";
-import { FaTwitch } from "react-icons/fa";
 import styles from "./animatedCard.module.css"
 
-const AnimatedCard = ({ listItems, state, toggleState }: { listItems: any, state: boolean, toggleState: () => void }) => {
+const AnimatedCard = ({ listItems, header, state, color, toggleState }: { listItems: any, header: any, state: boolean, color:string, toggleState: () => void }) => {
   const stateOpacity = () => (
     state ? { opacity: 1 } : { opacity: 0 }
   );
@@ -11,12 +10,12 @@ const AnimatedCard = ({ listItems, state, toggleState }: { listItems: any, state
     <>
       <Col className="centralizeY">
         <Container>
-          <Card className={styles.twitch}>
-            <Card.Header className={styles.header} onClick={() => toggleState()} >
-              <FaTwitch />
+          <Card className={styles.card}>
+            <Card.Header className={styles.header} onClick={() => toggleState()} style={{ backgroundColor: color }} >
+              {header}
             </Card.Header>
             {state ?
-              <motion.div initial={{ opacity: 1 }} animate={stateOpacity()} className={styles.items}>
+              <motion.div initial={{ opacity: 1 }} animate={stateOpacity()}>
                 <ListGroup>
                   {listItems}
                 </ListGroup>

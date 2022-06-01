@@ -5,50 +5,32 @@ import { useState } from "react";
 import { TwitchUserData } from "../../models/twitch";
 import { FaTwitch } from 'react-icons/fa';
 import { SteamUserData } from "../../models/steam";
+import AnimatedCard from "../animated-card/animatedCard";
+import AnimatedListGroup from "../animated-list-group/animatedListGroup";
 
 const More = ({ twitchData, steamData }: { twitchData: TwitchUserData, steamData: SteamUserData }) => {
   const [twitchCardState, setTwitchCardState] = useState(false);
   const toggleTwichCard: () => void = () => {
     return twitchCardState ? setTwitchCardState(false) : setTwitchCardState(true);
   }
-  const toggleOpacity = () => (
-    twitchCardState ? { opacity: 1, display: 'block' } : { opacity: 0 }
-  );
   const createdAtFormated = new Date(twitchData.created_at).formate();
+  const purple: string = "rgb(177, 43, 230)";
   return (
     <>
       <Col className="centralizeY">
-
         <Container>
-          <Card className={styles.twitch}>
-            <Card.Header className={styles.header} onClick={() => toggleTwichCard()} >
-              <FaTwitch />
-            </Card.Header>
-            {twitchCardState ?
-              <motion.div initial={{ opacity: 1 }} animate={toggleOpacity()} className={styles.items}>
-                <ListGroup>
-                  <motion.div initial={{ opacity: 0, display: 'none' }} animate={toggleOpacity()} transition={{ delay: 0.15 }}>
-                    <ListGroup.Item className={styles.item}>{twitchData.description.capitalize()}</ListGroup.Item>
-                  </motion.div>
-                  <motion.div initial={{ opacity: 0, display: 'none' }} animate={toggleOpacity()} transition={{ delay: 0.30 }}>
-                    <ListGroup.Item className={styles.item}>{"I'm a "}{twitchData.broadcaster_type.capitalize()}</ListGroup.Item>
-                  </motion.div>
-                  <motion.div initial={{ opacity: 0, display: 'none' }} animate={toggleOpacity()} transition={{ delay: 0.45 }}>
-                    <ListGroup.Item className={styles.item}>{"Account created at "}{createdAtFormated}</ListGroup.Item>
-                  </motion.div>
-                  <motion.div initial={{ opacity: 0, display: 'none' }} animate={toggleOpacity()} transition={{ delay: 0.60 }}>
-                    <ListGroup.Item className={styles.item}>Currently at {twitchData.view_count} views</ListGroup.Item>
-                  </motion.div>
-                  <motion.div initial={{ opacity: 0, display: 'none' }} animate={toggleOpacity()} transition={{ delay: 0.60 }}>
-                    <ListGroup.Item className={styles.item}><Image src={twitchData.profile_image_url} className={styles.profileImage} alt="twitch profile image" rounded /></ListGroup.Item>
-                  </motion.div>
-                </ListGroup>
-              </motion.div>
-              : null
+          <AnimatedCard header={<FaTwitch />} state={twitchCardState} color={purple} toggleState={() => toggleTwichCard()}
+            listItems={
+              <>
+                <AnimatedListGroup item={twitchData.description.capitalize()} state={twitchCardState} color={purple} delay={0.15} />
+                <AnimatedListGroup item={`${"I'am a " + twitchData.broadcaster_type.capitalize()}`} state={twitchCardState} color={purple} delay={0.3} />
+                <AnimatedListGroup item={`${"Account created at " + createdAtFormated}`} state={twitchCardState} color={purple} delay={0.45} />
+                <AnimatedListGroup item={`${"Currently at " + twitchData.view_count}`} state={twitchCardState} color={purple} delay={0.6} />
+                <AnimatedListGroup item={<Image src={twitchData.profile_image_url} className={styles.profileImage} alt="twitch profile image" rounded />} state={twitchCardState} color={purple} delay={0.75} />
+              </>
             }
-          </Card>
+          />
         </Container>
-
       </Col>
     </>
   )

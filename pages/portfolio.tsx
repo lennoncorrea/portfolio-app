@@ -7,14 +7,13 @@ import Introduce from '../components/introduce/introduce';
 import Footer from '../components/footer/footer';
 import About from '../components/about/about';
 import More from '../components/more/more'
-import { UserData } from '../models/twitchModels';
+import { TwitchUserData } from '../models/twitch';
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
 import { twitchUserData } from './api';
-
 
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;
@@ -26,8 +25,8 @@ const skills: object = {
   "React": "75"
 };
 
-const Portfolio: NextPage<UserData> = ({ user }: any) => {
-  const twitchUser: UserData = user;
+const Portfolio: NextPage<TwitchUserData> = ({ user }: any) => {
+  const twitchUser: TwitchUserData = user;
   const [homeState, setHomeState] = useState(true);
   const [aboutState, setAboutState] = useState(false);
   const [moreState, setMoreState] = useState(false);
@@ -85,7 +84,7 @@ const Portfolio: NextPage<UserData> = ({ user }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data: UserData = await twitchUserData();
+  const data: TwitchUserData = await twitchUserData();
   return {
     props: {
       user: data

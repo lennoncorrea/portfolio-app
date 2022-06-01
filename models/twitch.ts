@@ -1,4 +1,4 @@
-export type UserData = {
+export type TwitchUserData = {
     "id": string,
     "login": string,
     "display_name": string
@@ -12,8 +12,8 @@ export type UserData = {
   };
   
   export type TwichApiHeader = {
-    'ClientId': string,
-    'ClientSecret': string
+    'client_id': string,
+    'client_secret': string
   }
 
   export type TwitchAcessToken = {

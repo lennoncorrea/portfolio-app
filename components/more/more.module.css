@@ -1,30 +1,18 @@
-.pm {
-  margin: 0;
-  padding: 0;
-  background-color: red;
-}
-
 .twitch {
-  display: inline-flex;
   background-color: rgb(177, 43, 230);
-  border-radius: 1rem;
 }
 
-.twitch .profile {
-  width: 120px;
+.twitch .header {
+  display: flex;
+  justify-content: center;
   padding: 1rem;
+  font-size: 2rem;
 }
 
-.twitch .displayName {
-  text-align: center;
+.twitch .item {
+  background-color: rgb(177, 43, 230);
 }
 
-.twitch .leftCol{
-    
-}
-
-.twitch .rightCol {
-    width: 100%;
-    text-align: center;
-
+.twitch .profileImage{
+  width: 100px;
 }

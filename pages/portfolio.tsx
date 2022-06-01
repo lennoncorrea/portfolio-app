@@ -13,8 +13,9 @@ import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
-import { steamUserData, twitchUserData } from './api';
 import { SteamUserData } from '../models/steam';
+import { twitchService } from '../services/twitch';
+import { steamService } from '../services/steam';
 
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;
@@ -85,8 +86,8 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
   };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const twitchData: TwitchUserData = await twitchUserData();
-  const steamData: SteamUserData = await steamUserData();
+  const twitchData: TwitchUserData = await twitchService.userData();
+  const steamData: SteamUserData = await steamService.userData();
   return {
     props: {
       twitchData: twitchData,

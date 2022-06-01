@@ -1,14 +1,15 @@
 import { motion, VariantLabels } from "framer-motion";
 import { Card, Col, Container, Image, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import styles from "./more.module.css"
-import { FunctionComponent, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { TwitchUserData } from "../../models/twitch";
 import { FaTwitch } from 'react-icons/fa';
 import { SteamUserData } from "../../models/steam";
+import { twitchService } from "../../services/twitch";
 
 const More = ({ twitchData, steamData }: { twitchData: TwitchUserData, steamData: SteamUserData }) => {
   const [twitchCardState, setTwitchCardState] = useState(false);
-  const toggleTwichCard: any = () => {
+  const toggleTwichCard: () => void = () => {
     return twitchCardState ? setTwitchCardState(false) : setTwitchCardState(true);
   }
   const createdAtFormated = new Date(twitchData.created_at).formate();

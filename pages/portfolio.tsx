@@ -2,17 +2,16 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
-import NavbarApp from '../components/navbar/navbar';
-import Introduce from '../components/introduce/introduce';
-import Footer from '../components/footer/footer';
-import About from '../components/about/about';
-import More from '../components/more/more'
-import { TwitchUserData } from '../models/twitch';
+import NavbarApp from '../components/navbar/NavbarApp';
+import Introduce from '../components/introduce/Introduce';
+import About from '../components/about/About';
+import More from '../components/more/More'
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
+import { TwitchUserData } from '../models/twitch';
 import { SteamUserData } from '../models/steam';
 import { twitchService } from '../services/twitch';
 import { steamService } from '../services/steam';
@@ -32,25 +31,31 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
     const [homeState, setHomeState] = useState(true);
     const [aboutState, setAboutState] = useState(false);
     const [moreState, setMoreState] = useState(false);
-    const callback = (item: string) => {
+    const callback: (item: string) => void = (item: string) => {
       if (item === "Home") {
         setHomeState(true);
         setAboutState(false);
         setMoreState(false);
-        return;
       }
       if (item === "About") {
         setAboutState(true);
         setMoreState(false);
         setHomeState(false);
-        return;
       }
       if (item === "More") {
         setMoreState(true);
         setAboutState(false);
         setHomeState(false);
-        return;
       }
+    }
+    const showAuxComponent = (state: boolean, component: JSX.Element) => {
+      if (state && !homeState) {
+        return component;
+      }
+      return null;
+    }
+    const colClassName: () => string = () => {
+      return homeState ? "centralizeY" : `${styles.responsiveHandle + " centralizeY"}`;
     }
     return (
       <>
@@ -67,16 +72,11 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
               callback={callback}
             />
             <Row className="block">
-              <Col className={homeState ? "centralizeY" : `${styles.responsiveHandle + " centralizeY"}`}>
+              <Col className={colClassName()}>
                 <Introduce />
               </Col>
-              {!homeState ?
-                <>
-                  {aboutState ? <About skills={skills} /> : null}
-                  {moreState ? <More twitchData={twitchData} steamData={steamData} /> : null}
-                </> :
-                null
-              }
+              {showAuxComponent(aboutState, <About skills={skills} />)}
+              {showAuxComponent(moreState, <More twitchData={twitchData} steamData={steamData} />)}
             </Row>
           </Container>
         </main>

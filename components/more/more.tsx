@@ -1,11 +1,12 @@
 import { Col, Container, Image, Row } from "react-bootstrap";
-import styles from "./more.module.css"
+import styles from "./More.module.css"
 import { SetStateAction, useState } from "react";
 import { TwitchUserData } from "../../models/twitch";
 import { FaSteam, FaTwitch } from 'react-icons/fa';
 import { SteamUserData } from "../../models/steam";
-import AnimatedCard from "../animated-card/animatedCard";
-import AnimatedListGroup from "../animated-list-group/animatedListGroup";
+
+import AnimatedListGroup from "../animated-list-group/AnimatedListGroup";
+import AnimatedCard from "../animated-card/AnimatedCard";
 
 const More = ({ twitchData, steamData }: { twitchData: TwitchUserData, steamData: SteamUserData }) => {
   const [twitchCardState, setTwitchCardState] = useState(false);

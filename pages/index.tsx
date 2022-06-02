@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
-import Footer from '../components/footer/footer'
-import FormApp from '../components/form/form'
-import ModalApp from '../components/modal/Modal'
+import Footer from '../components/footer/Footer'
+import FormApp from '../components/form/FormApp'
+import ModalApp from '../components/modal/ModalApp'
 
 import styles from '../styles/Home.module.css'
 

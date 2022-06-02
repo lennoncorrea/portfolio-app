@@ -2,9 +2,8 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
-import NavbarApp from '../components/navbar/navbar';
+import NavbarApp from '../components/navbar/NavbarApp';
 import Introduce from '../components/introduce/introduce';
-import Footer from '../components/footer/footer';
 import About from '../components/about/about';
 import More from '../components/more/more'
 import { TwitchUserData } from '../models/twitch';
@@ -52,7 +51,7 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
         return;
       }
     }
-    const showComponent = (state: boolean, component: JSX.Element) => {
+    const showComponent: (state: boolean, component: JSX.Element) => JSX.Element | null = (state: boolean, component: JSX.Element) => {
       if (!homeState && state) {
         return component;
       }

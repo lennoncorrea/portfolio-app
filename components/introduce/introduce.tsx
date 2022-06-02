@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Col, Button } from 'react-bootstrap';
-import FormApp from '../form/form';
-import ModalApp from '../modal/Modal';
+import FormApp from '../form/FormApp';
+import ModalApp from '../modal/ModalApp';
 import styles from './introduce.module.css';
 
 

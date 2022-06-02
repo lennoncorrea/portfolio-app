@@ -4,8 +4,9 @@ import { SetStateAction, useState } from "react";
 import { TwitchUserData } from "../../models/twitch";
 import { FaSteam, FaTwitch } from 'react-icons/fa';
 import { SteamUserData } from "../../models/steam";
-import AnimatedCard from "../animated-card/AnimatedCard";
+
 import AnimatedListGroup from "../animated-list-group/AnimatedListGroup";
+import AnimatedCard from "../animated-card/AnimatedCard";
 
 const More = ({ twitchData, steamData }: { twitchData: TwitchUserData, steamData: SteamUserData }) => {
   const [twitchCardState, setTwitchCardState] = useState(false);

@@ -1,12 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/lennoncorrea/portfolio-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
 <h3 align="center">Portfolio App</h3>
 
   <p align="center">
@@ -33,15 +26,13 @@
 * [Next.js](https://nextjs.org/)
 * [Bootstrap](https://getbootstrap.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- CONTACT -->
 ## Contact
 
-Lennon Correa - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Lennon Correa - this@lennoncorrea.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/lennoncorrea/portfolio-app](https://github.com/lennoncorrea/portfolio-app)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

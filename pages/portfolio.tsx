@@ -78,7 +78,6 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
                 null
               }
             </Row>
-            <Footer />
           </Container>
         </main>
       </>

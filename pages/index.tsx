@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
+import Footer from '../components/footer/footer'
 import FormApp from '../components/form/form'
 import ModalApp from '../components/modal/Modal'
 
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
             </a>
           </div>
         </main>
+        <Footer />
       </div>
       <ModalApp title="Contact Me" body={<FormApp onHide={() => setModalShow(false)} />} show={modalShow} onHide={() => setModalShow(false)} />
     </>

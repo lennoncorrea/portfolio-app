@@ -7,4 +7,4 @@ stuffs about me.
 
 Feel free to contact me if you need something!
 
-[http://lennoncorrea.com](http://www.lennoncorrea.com)
+[http://portfolio.lennoncorrea.com](http://www.portfolio.lennoncorrea.com)

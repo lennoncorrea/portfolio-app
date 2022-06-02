@@ -52,6 +52,12 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
         return;
       }
     }
+    const showComponent = (state: boolean, component: JSX.Element) => {
+      if (!homeState && state) {
+        return component;
+      }
+      return null;
+    }
     return (
       <>
         <Head>
@@ -70,13 +76,10 @@ const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steam
               <Col className={homeState ? "centralizeY" : `${styles.responsiveHandle + " centralizeY"}`}>
                 <Introduce />
               </Col>
-              {!homeState ?
-                <>
-                  {aboutState ? <About skills={skills} /> : null}
-                  {moreState ? <More twitchData={twitchData} steamData={steamData} /> : null}
-                </> :
-                null
-              }
+              <>
+                {showComponent(aboutState, <About skills={skills} />)}
+                {showComponent(moreState, <More twitchData={twitchData} steamData={steamData} />)}
+              </>
             </Row>
           </Container>
         </main>

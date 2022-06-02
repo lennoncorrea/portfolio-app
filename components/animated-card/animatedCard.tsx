@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, Container, ListGroup } from "react-bootstrap";
-import styles from "./animatedCard.module.css"
+import styles from "./AnimatedCard.module.css"
 
 const AnimatedCard = ({ listItems, header, state, color, bgColor, toggleState }:
   { listItems: any, header: any, state: boolean, color: string, bgColor: string, toggleState: () => void }) => {

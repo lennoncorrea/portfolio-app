@@ -1,5 +1,5 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import styles from './navbar.module.css';
+import styles from './NavbarApp.module.css';
 
 
 const NavbarApp = ({ brand, items, callback }: { brand: any, items: string[], callback: Function }) => {

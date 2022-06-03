@@ -5,7 +5,6 @@ import FormApp from '../form/FormApp';
 import ModalApp from '../modal/ModalApp';
 import styles from './introduce.module.css';
 
-
 const Introduce = () => {
   const [modalShow, setModalShow] = useState(false);
   return (

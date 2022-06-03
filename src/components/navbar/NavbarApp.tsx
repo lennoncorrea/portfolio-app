@@ -1,7 +1,6 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import styles from './navbar.module.css';
 
-
 const NavbarApp = ({ brand, items, callback }: { brand: any, items: string[], callback: Function }) => {
   return (
     <Navbar expand="lg" variant="light" className={styles.navbarApp}>

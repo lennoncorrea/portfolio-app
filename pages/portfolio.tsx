@@ -2,19 +2,19 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 
-import NavbarApp from '../components/navbar/NavbarApp';
-import Introduce from '../components/introduce/introduce';
-import About from '../components/about/about';
-import More from '../components/more/more'
-import { TwitchUserData } from '../models/twitch';
+import NavbarApp from '../src/components/navbar/NavbarApp';
+import Introduce from '../src/components/introduce/introduce';
+import About from '../src/components/about/about';
+import More from '../src/components/more/more'
+import { TwitchUserData } from '../src/models/twitch';
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
-import { SteamUserData } from '../models/steam';
-import { twitchService } from '../services/twitch';
-import { steamService } from '../services/steam';
+import { SteamUserData } from '../src/models/steam';
+import { twitchService } from '../src/services/twitch';
+import { steamService } from '../src/services/steam';
 
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;

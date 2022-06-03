@@ -1,10 +1,41 @@
-## Portfolio
+<div id="top"></div>
 
-Yo, welcome to my portfolio.
+<h3 align="center">Portfolio App</h3>
 
-Here you can find some of my projects, where i worked and some more cool
-stuffs about me.
+  <p align="center">
+    A simple portfolio.
+    <br />
+    <a href="https://github.com/lennoncorrea/portfolio-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/lennoncorrea/portfolio-app/deployments/activity_log?environment=Preview">View Demo</a>
+    ·
+    <a href="https://github.com/lennoncorrea/portfolio-app/issues">Report Bug</a>
+  </p>
+</div>
 
-Feel free to contact me if you need something!
 
-[http://portfolio.lennoncorrea.com](http://www.portfolio.lennoncorrea.com)
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://portfolio.lennoncorrea.com)
+
+
+### Built With
+
+* [Next.js](https://nextjs.org/)
+* [Bootstrap](https://getbootstrap.com)
+
+
+<!-- CONTACT -->
+## Contact
+
+Lennon Correa - this@lennoncorrea.com
+
+Project Link: [https://github.com/lennoncorrea/portfolio-app](https://github.com/lennoncorrea/portfolio-app)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[product-screenshot]: images/page-screenshot.png

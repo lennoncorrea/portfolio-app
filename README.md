@@ -11,6 +11,8 @@
     <a href="https://github.com/lennoncorrea/portfolio-app/deployments/activity_log?environment=Preview">View Demo</a>
     ·
     <a href="https://github.com/lennoncorrea/portfolio-app/issues">Report Bug</a>
+    ·
+    <a href="https://sonarcloud.io/summary/overall?id=lennoncorrea_portfolio-app">Sonar Cloud</a>
   </p>
 </div>
 

@@ -6,14 +6,14 @@ import NavbarApp from '../src/components/navbar/NavbarApp';
 import Introduce from '../src/components/introduce/introduce';
 import About from '../src/components/about/about';
 import More from '../src/components/more/more'
-import { Skills } from '../src/models/interfaces/skills/skills';
-import { TwitchUserData } from '../src/models/interfaces/twitch/twitch';
+import { Skills } from '../src/models/interfaces/skills';
+import { TwitchUserData } from '../src/models/interfaces/twitch';
 
 import { FaGit } from 'react-icons/fa';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from "../styles/portfolio.module.css"
-import { SteamUserData } from '../src/models/interfaces/steam/steam';
+import { SteamUserData } from '../src/models/interfaces/steam';
 import { twitchService } from '../src/services/twitch';
 import { steamService } from '../src/services/steam';
 

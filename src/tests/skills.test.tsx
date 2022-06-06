@@ -1,4 +1,4 @@
-import { Skills } from './skills';
+import { Skills } from '../models/interfaces/skills';
 
 describe('Skill Interface', () => {
     it('should be created', () => {

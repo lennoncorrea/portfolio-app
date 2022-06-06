@@ -1,4 +1,4 @@
-import { SteamApiHeader, SteamUserData, UserData } from './steam';
+import { SteamApiHeader, SteamUserData, UserData } from '../models/interfaces/steam';
 
 describe('Steam Interface', () => {
     describe('UserData Interface', () => {

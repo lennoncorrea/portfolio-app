@@ -1,4 +1,4 @@
-import { TwitchAcessToken, TwitchApiHeader, TwitchUserData } from "./twitch";
+import { TwitchAcessToken, TwitchApiHeader, TwitchUserData } from "../models/interfaces/twitch";
 
 describe('Twitch Interfaces', () => {
     describe('TwitchUserData Interface', () => {

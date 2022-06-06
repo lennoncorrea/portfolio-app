@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import { render } from "@testing-library/react";
-import About from "./about";
+import About from '../components/about/about';
 
 describe('About Component', () => {
   it('should be rendered', () => {

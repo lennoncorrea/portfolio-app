@@ -1,4 +1,4 @@
-import { TwitchApiHeader, TwitchAcessToken, TwitchUserData } from "../models/interfaces/twitch/twitch";
+import { TwitchApiHeader, TwitchAcessToken, TwitchUserData } from "../models/interfaces/twitch";
 
 const twitchApiHeader: TwitchApiHeader = {
     "client_id": String(process.env.TWITCH_CLIENT_ID),

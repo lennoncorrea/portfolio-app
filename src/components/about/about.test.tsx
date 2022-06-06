@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import { render, queryByAttribute } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import About from "./about";
 
 describe('About Component', () => {

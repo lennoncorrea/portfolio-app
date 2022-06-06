@@ -1,6 +1,6 @@
-import { TwichApiHeader, TwitchAcessToken, TwitchUserData } from "../models/twitch";
+import { TwitchApiHeader, TwitchAcessToken, TwitchUserData } from "../models/interfaces/twitch/twitch";
 
-const twitchApiHeader: TwichApiHeader = {
+const twitchApiHeader: TwitchApiHeader = {
     "client_id": String(process.env.TWITCH_CLIENT_ID),
     "client_secret": String(process.env.TWITCH_CLIENT_SECRET)
 }

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Col, OverlayTrigger, ProgressBar, Row, Tooltip } from "react-bootstrap";
-import { Skills } from "../../models/skills";
+import { Skills } from "../../models/interfaces/skills/skills";
 import styles from "./about.module.css"
 
 const About = ({ skills }: { skills: Skills }) => {

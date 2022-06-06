@@ -1,7 +1,7 @@
-export type UserData = {
+export interface UserData {
     "id": string,
     "login": string,
-    "display_name": string
+    "display_name": string,
     "type": string,
     "broadcaster_type": string,
     "description": string,
@@ -11,11 +11,11 @@ export type UserData = {
     "created_at": string
 };
 
-export type SteamApiHeader = {
+export interface SteamApiHeader {
     "key": string
 }
 
-export type SteamUserData = {
+export interface SteamUserData {
     "steamid": string,
     "communityvisibilitystate": number,
     "profilestate": number,

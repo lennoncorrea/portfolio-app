@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Col, Button } from 'react-bootstrap';
 import FormApp from '../form/FormApp';
 import ModalApp from '../modal/ModalApp';
-import styles from './introduce.module.css';
+import styles from './Introduce.module.css';
 
 const Introduce = () => {
   const [modalShow, setModalShow] = useState(false);

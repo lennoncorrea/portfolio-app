@@ -1,4 +1,4 @@
-import { SteamApiHeader, SteamUserData } from "../models/steam";
+import { SteamApiHeader, SteamUserData } from "../models/interfaces/steam";
 
 const steamApiHeader: SteamApiHeader = {
     "key": String(process.env.STEAM_KEY)

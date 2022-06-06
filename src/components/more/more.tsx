@@ -1,9 +1,9 @@
 import { Col, Container, Image, Row } from "react-bootstrap";
 import styles from "./more.module.css"
 import { SetStateAction, useState } from "react";
-import { TwitchUserData } from "../../models/twitch";
+import { TwitchUserData } from "../../models/interfaces/twitch";
 import { FaSteam, FaTwitch } from 'react-icons/fa';
-import { SteamUserData } from "../../models/steam";
+import { SteamUserData } from "../../models/interfaces/steam";
 import AnimatedCard from "../animated-card/animatedCard";
 import AnimatedListGroup from "../animated-list-group/animatedListGroup";
 

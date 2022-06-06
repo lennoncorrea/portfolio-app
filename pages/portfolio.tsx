@@ -6,6 +6,7 @@ import NavbarApp from '../src/components/navbar/NavbarApp';
 import Introduce from '../src/components/introduce/introduce';
 import About from '../src/components/about/about';
 import More from '../src/components/more/more'
+import { Skills } from '../src/models/skills';
 import { TwitchUserData } from '../src/models/twitch';
 
 import { FaGit } from 'react-icons/fa';
@@ -16,14 +17,15 @@ import { SteamUserData } from '../src/models/steam';
 import { twitchService } from '../src/services/twitch';
 import { steamService } from '../src/services/steam';
 
+
 const pageTitle: string = "Portfolio";
 const brand: object = <FaGit />;
 const navItems: string[] = ["Home", "About", "More"];
-const skills: object = {
-  "C#": "50",
-  "Java": "50",
-  "Angular": "50",
-  "React": "75"
+const skills: Skills = {
+  "CSharp": 50,
+  "Java": 50,
+  "Angular": 50,
+  "React": 75
 };
 
 const Portfolio: ({ twitchData, steamData }: { twitchData: TwitchUserData; steamData: SteamUserData; }) => JSX.Element =
